@@ -8,32 +8,50 @@ const fetchCategories = async () => {
 };
 
 const CategorySlider = () => {
-  const { data: categories } = useQuery("CategoryImgeSlider", fetchCategories);
+  const { data: categories } = useQuery("CategoryImageSlider", fetchCategories);
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 100,
     autoplay: true,
-    slidesToShow: 6,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className=" w-[80%] m-auto mt-4">
+    <div className="w-[80%] m-auto mt-4">
       <Slider {...settings}>
-        {" "}
         {categories?.data.data.map((category, idx) => (
           <div key={idx}>
             <img
               src={category.image}
               alt={category.name}
-              className=" h-56 w-full"
+              className="h-56 w-full object-cover"
             />
-            <h3>{category.name}</h3>
+            <h3 className="text-center">{category.name}</h3>
           </div>
-        ))}{" "}
-      </Slider>{" "}
+        ))}
+      </Slider>
     </div>
   );
 };
