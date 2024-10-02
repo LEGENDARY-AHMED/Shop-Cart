@@ -5,14 +5,31 @@ import img2 from "./../../assets/slider-image-2.png";
 import img3 from "./../../assets/slider-image-3.png";
 
 const HomeSlider = () => {
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, 
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+
   return (
     <div className="mt-24 container m-auto">
       <Slider {...settings}>
