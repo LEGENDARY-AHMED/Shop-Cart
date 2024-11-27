@@ -6,6 +6,8 @@
 
 This project is built with efficiency and scalability in mind, providing users with an intuitive interface for browsing, adding, and managing products in a shopping cart.
 
+![Shop Cart](https://github.com/user-attachments/assets/ea77ed58-b604-49e0-bc12-d83e19a692bf)
+
 ## Features
 
 - **Product Listing**: Display products with details such as images, descriptions, and prices.  
