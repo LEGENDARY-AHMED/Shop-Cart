@@ -34,7 +34,6 @@ export default function App() {
           <Layout />
         </>
       ),
-  element: <Layout />,
       children: [
         { path: "/", element: <SignIn /> },
         { path: "/Home", element: <Home /> },
