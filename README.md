@@ -24,7 +24,8 @@ This project is built with efficiency and scalability in mind, providing users w
 
 To set up the project locally, follow these steps:
 
-1. Clone the repository:
+1. **Clone the repository**:  
+   Run the following command in your terminal to clone the repository:
    ```bash
    git clone https://github.com/LEGENDARY-AHMED/Shop-Cart.git
    cd Shop-Cart
