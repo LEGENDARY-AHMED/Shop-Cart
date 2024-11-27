@@ -20,6 +20,7 @@ import Payment from "./components/Paymant/Payment";
 import WishListContextProvider from "./context/WishListContext";
 import AllOrder from "./components/AllOrder/AllOrder";
 import GoBackRout from "./components/GoBackRout/GoBackRout";
+import ScrollToTop from "./context/ScrollToTop";
 
 export default function App() {
   const routes = new QueryClient();
@@ -27,7 +28,13 @@ export default function App() {
   const myRouter = createHashRouter([
     {
       path: "/",
-      element: <Layout />,
+    element: (
+        <>
+          <ScrollToTop />
+          <Layout />
+        </>
+      ),
+  element: <Layout />,
       children: [
         { path: "/", element: <SignIn /> },
         { path: "/Home", element: <Home /> },
